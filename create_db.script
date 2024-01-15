@@ -7,3 +7,7 @@ psql -U postgres -d nat_database -c 'CREATE TABLE user_clients (full_name TEXT N
 psql -U postgres -d nat_database -c 'CREATE TABLE other_providers (asn INTEGER NOT NULL, name TEXT NOT NULL, PRIMARY KEY (asn));'
 
 psql -U postgres -d nat_database -c 'CREATE TABLE traffic (start_date DATE NOT NULL, start_time TIME NOT NULL, end_date DATE NOT NULL, end_time TIME NOT NULL, traffic_size INTEGER NOT NULL);'
+
+psql -U postgres -d nat_database -c 'ALTER TABLE company_clients ADD COLUMN enable_until_date DATE NOT NULL;'
+
+psql -U postgres -d nat_database -c 'ALTER TABLE user_clients ADD COLUMN enable_until_date DATE NOT NULL;'
