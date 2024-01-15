@@ -11,3 +11,5 @@ psql -U postgres -d nat_database -c 'CREATE TABLE traffic (start_date DATE NOT N
 psql -U postgres -d nat_database -c 'ALTER TABLE company_clients ADD COLUMN enable_until_date DATE NOT NULL;'
 
 psql -U postgres -d nat_database -c 'ALTER TABLE user_clients ADD COLUMN enable_until_date DATE NOT NULL;'
+
+psql -U postgres -d nat_database -c 'ALTER TABLE traffic ADD COLUMN who_spend_it TEXT NOT NULL;'
