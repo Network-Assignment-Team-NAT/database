@@ -9,7 +9,7 @@ CREATE TABLE company_clients (
 	id INT GENERATED ALWAYS AS IDENTITY, 
 	name TEXT NOT NULL, 
 	tariff INT NOT NULL references tariffs(id), 
-	traffic INT NOT NULL, 
+	traffic INT NOT NULL DEFAULT 0, 
 	enable_until_date DATE NOT NULL,
 	PRIMARY KEY (id)
 );
@@ -18,7 +18,7 @@ CREATE TABLE user_clients (
 	name TEXT NOT NULL, 
 	address TEXT NOT NULL, 
 	tariff INT NOT NULL references tariffs(id), 
-	traffic INT NOT NULL, 
+	traffic INT NOT NULL DEFAULT 0, 
 	enable_until_date DATE NOT NULL,
 	PRIMARY KEY (id)
 );
