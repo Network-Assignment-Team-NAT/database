@@ -1,7 +1,7 @@
 CREATE TABLE tariffs (
 	id INT GENERATED ALWAYS AS IDENTITY, 
 	name TEXT NOT NULL, 
-	speed INT NOT NULL, 
+	speed INT, 
 	traffic INT, 
 	PRIMARY KEY (id)
 );
