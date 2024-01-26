@@ -1,0 +1,5 @@
+INSERT INTO tariffs (name, speed, traffic) VALUES
+	('god', NULL, NULL),
+	('fast-bomj', NULL, 10000),
+	('slow-millionere', 300, NULL),
+	('normal', 1000, 100*1000);
