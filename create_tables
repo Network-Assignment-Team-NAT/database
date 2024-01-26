@@ -10,7 +10,7 @@ CREATE TABLE company_clients (
 	name TEXT NOT NULL, 
 	tariff INT NOT NULL references tariffs(id), 
 	traffic INT NOT NULL DEFAULT 0, 
-	enable_until_date DATE NOT NULL,
+	service_until DATE NOT NULL,
 	PRIMARY KEY (id)
 );
 CREATE TABLE user_clients (
@@ -19,7 +19,7 @@ CREATE TABLE user_clients (
 	address TEXT NOT NULL, 
 	tariff INT NOT NULL references tariffs(id), 
 	traffic INT NOT NULL DEFAULT 0, 
-	enable_until_date DATE NOT NULL,
+	service_until DATE NOT NULL,
 	PRIMARY KEY (id)
 );
 CREATE TABLE other_providers (
